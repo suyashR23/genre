@@ -1,0 +1,209 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #212333;
+	margin-bottom: 50px;
+	font-family: cursive;
+}
+
+h1{
+	text-transform: uppercase;
+	font-size: 15vh;
+	font-weight: 900;
+	text-align: center;
+	background-image: url(BGText.jpg);
+	background-size: cover;
+	font-family: 'Open Sans',sans-serif;
+	color: transparent;
+	-webkit-background-clip:text;
+	letter-spacing: 5px;
+}
+.genre{
+	width: 450px;
+	height: 450px;
+	border-radius: 50%;
+	box-shadow: inset 8px 8px 10px #151722,  /*inner shadow*/
+	inset -8px -8px 10px #25283b;
+	position: absolute;
+	top: 400px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 50px;
+	transition: 1s;
+}
+
+#sifi{
+	overflow-y: hidden;
+}
+
+#action{
+	overflow-y: hidden;
+}
+
+#scifi.active{
+	border-radius: 50px;
+	width: 90%;
+	overflow-y: scroll;
+	
+}
+
+#sifi.active:hover{
+	overflow-y: scroll;
+}
+
+#action.active{
+	border-radius: 50px;
+	width: 90%;
+}
+#action.active:hover{
+	overflow-y: scroll;
+}
+
+.genre .content{
+	display: none;
+	font-size: 20px;
+	font-weight: 900;
+	transition: 1s ease-in;
+}
+
+#scifi.active .content{
+	display: block;
+}
+
+#action.active .content{
+	display: block;
+}
+
+#action{
+	position: relative;
+	top: 680px;
+}
+
+.genre h2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	position: absolute;
+	top: 50%;
+	left: 160px;
+	transform: translateY(-50%);
+	color: #bfc9ca;
+}
+
+.hdr{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 4vh;
+	display: none;
+	color: #bfc9ca;
+}
+
+#hddr3{
+	position: absolute;
+	top: 360px;
+}
+
+#hddr4{
+	position: absolute;
+	top: 925px;
+}
+
+.content{
+	position: absolute;
+	left: 50px;
+	top: 40px;
+}
+
+.genre .content ol li{
+	margin-bottom: 20px;
+	border-bottom: 2px;
+	border-color: #fff;
+	letter-spacing: 1px;
+	color: #a9cce3;
+}
+
+.content ol li button{
+	position: absolute;
+	right: -30vw;
+	font-size: 2vh;
+	width: 8vw;
+	height: 5vh;
+	color: #fff;
+	background: transparent;
+	cursor: pointer;
+	outline: none;
+	box-shadow: 2px 2px 4px #151722,  /*outer shadow*/
+	-2px -2px 4px #25283b,
+	inset 8px 8px 10px #151722,  /*inner shadow*/
+	inset -8px -8px 10px #25283b; 
+	border:0;
+}
+
+.content ol li button:hover{
+	
+	transform: scale(0.97);
+	box-shadow: 0 0 4px #2196f3;
+}
+
+.genre .content h3{
+	margin-bottom: 10px;
+	color: #bfc9ca;
+}
+
+#action_content ol li button{
+	position: absolute;
+	right: -47vw;
+}
+
+@media only screen and (max-width: 450px){
+
+	h1{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-48%);
+		font-size: 8vh;
+	}
+
+	.genre{
+		width: 350px;
+		height: 350px;
+		position: absolute;
+		top: 300px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	#hddr1{
+		position: absolute;
+		left: 110px;
+	}
+	#hddr2{
+		position: absolute;
+		left: 110px;
+	}
+	
+	#action{
+		position: absolute;
+		top: 800px;
+	}
+
+	#hddr3{
+	position: absolute;
+	top: 250px;
+	width: 250px;
+	}
+
+	#hddr4{
+	position: absolute;
+	top: 750px;
+	}
+
+	.content ol li button{
+		right: -30vw;
+		width: 25vw;
+	}
+}
